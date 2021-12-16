@@ -58,28 +58,6 @@ const AddExpense = (props) => {
             <label htmlFor="amount">Amount</label>
             <input id="amount" type="number" onChange={amountChangeHandler} />
 
-            {/* <div class="title">Add expense</div>
-            <div className="input-container ic1">
-                <input id="expense-name" type="text" placeholder=" " onChange={expenseChangeHandler} />
-                <div className="cut" />
-                <label className="placeholder">Expense Name</label>
-            </div>
-
-            <div className="input-container ic2">
-                <input id="classification" type="text" placeholder=" " onChange={classificationChangeHandler} />
-                <div className="cut" />
-                <label className="placeholder">Classification</label>
-            </div>
-            <div className="input-container ic2">
-                <input id="date" type="date" placeholder=" " onChange={dateChangeHandler} />
-                <div className="cut cut-short" />
-                <label className="placeholder">Date</label>
-            </div>
-            <div className="input-container ic2">
-                <input id="amount" type="number" placeholder=" " onChange={amountChangeHandler} />
-                <div className="cut cut-short" />
-                <label className="placeholder">Amount</label>
-            </div> */}
             <Button type="submit" >submit</Button>
         </form>
 
