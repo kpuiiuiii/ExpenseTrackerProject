@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddExpense.css"
+import classes from "./AddExpense.module.css"
 import Button from "./Button";
 
 
@@ -43,48 +43,45 @@ const AddExpense = (props) => {
         setEnteredAmount(event.target.value)
     }
     return (
+
         <form onSubmit={addExpenseHandler}>
-            <div className="title">Add expense</div>
+            <h1>Add Expense</h1>
+            <label htmlFor="expense-name">Expense Name</label>
+            <input id="expense-name" type="text" onChange={expenseChangeHandler} />
+
+            <label htmlFor="classification">Classification</label>
+            <input id="classification" type="text" onChange={classificationChangeHandler} />
+
+            <label htmlFor="date">Date</label>
+            <input id="date" type="date" onChange={dateChangeHandler} />
+
+            <label htmlFor="amount">Amount</label>
+            <input id="amount" type="number" onChange={amountChangeHandler} />
+
+            {/* <div class="title">Add expense</div>
             <div className="input-container ic1">
-                <input
-                    id="expense-name"
-                    type="text"
-                    placeholder=" "
-                    value={enteredExpense}
-                    onChange={expenseChangeHandler} />
-                <div className="cut"></div>
+                <input id="expense-name" type="text" placeholder=" " onChange={expenseChangeHandler} />
+                <div className="cut" />
                 <label className="placeholder">Expense Name</label>
             </div>
+
             <div className="input-container ic2">
-                <input id="classification"
-                    type="text"
-                    placeholder=" "
-                    value={enteredClassification}
-                    onChange={classificationChangeHandler} />
-                <div className="cut"></div>
+                <input id="classification" type="text" placeholder=" " onChange={classificationChangeHandler} />
+                <div className="cut" />
                 <label className="placeholder">Classification</label>
             </div>
             <div className="input-container ic2">
-                <input id="date"
-                    type="date"
-                    placeholder=" "
-                    value={enteredDate}
-                    onChange={dateChangeHandler} />
-                <div className="cut cut-short"></div>
+                <input id="date" type="date" placeholder=" " onChange={dateChangeHandler} />
+                <div className="cut cut-short" />
                 <label className="placeholder">Date</label>
             </div>
             <div className="input-container ic2">
-                <input id="amount"
-                    type="number"
-                    placeholder=" "
-                    value={enteredAmount}
-                    onChange={amountChangeHandler} />
-                <div className="cut cut-short"></div>
+                <input id="amount" type="number" placeholder=" " onChange={amountChangeHandler} />
+                <div className="cut cut-short" />
                 <label className="placeholder">Amount</label>
-            </div>
+            </div> */}
             <Button type="submit" >submit</Button>
         </form>
-
 
     )
 }
