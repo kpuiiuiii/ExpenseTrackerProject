@@ -1,10 +1,14 @@
 import React from "react"
+import AddExpense from "./AddExpense"
+import TransactionList from "./TransactionList"
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                Hello World
+                <AddExpense />
+                <TransactionList transactions={[]} />
+
             </div>
         )
     }
